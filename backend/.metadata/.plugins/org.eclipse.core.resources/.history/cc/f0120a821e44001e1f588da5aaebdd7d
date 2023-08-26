@@ -1,0 +1,21 @@
+package app.sctp.entity;
+
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+public class User {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
+	
+	private String email;
+	
+	private String password;
+
+	private boolean enabled;
+	
+	private String role;
+	
+}

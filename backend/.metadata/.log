@@ -2915,3 +2915,6 @@ Java Model Exception: Java Model Status [src/main/java [in sctp] is not on its p
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-08-26 13:54:26.143
 !MESSAGE executing callback sts4.classpath.qwUbVgcI SUCCESS [done]
+
+!ENTRY org.eclipse.jdt.ui 2 0 2023-08-26 15:39:15.137
+!MESSAGE The 'org.eclipse.jdt.ui.JavaAllCompletionProposalComputer' proposal computer from the 'org.eclipse.jdt.ui' plug-in did not complete normally. The extension took too long to return from the 'computeCompletionProposals()' operation.

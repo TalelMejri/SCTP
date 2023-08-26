@@ -1,0 +1,5 @@
+package app.sctp.entity;
+
+public class User {
+	@
+}

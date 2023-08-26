@@ -1,0 +1,5 @@
+package app.sctp.dao;
+
+public interface UserRepository {
+
+}
