@@ -1,0 +1,19 @@
+package app.sctp.controller;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import app.sctp.entity.User;
+
+@RestController
+public class AuthController {
+  
+	
+	
+	@PostMapping("SignUp")
+	public ResponseEntity<?> signUp(@RequestBody User user){
+		
+	}
+}

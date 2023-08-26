@@ -1,0 +1,6 @@
+package InfoData;
+
+public class Credentials {
+  String email;
+  String password;
+}

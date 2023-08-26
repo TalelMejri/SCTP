@@ -1,0 +1,11 @@
+package Jwt;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class jwtrequestfilter {
+	
+	@Autowired
+	jwtTokenUtil JwtTokenUtil ;
+	@Autowired
+	app.sctp.security.UserDetailsServiceImpl UserDetailsServiceImpl;
+}

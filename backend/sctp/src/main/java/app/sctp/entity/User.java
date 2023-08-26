@@ -33,6 +33,9 @@ public class User {
 	
 	private String role;
 	
+	@ColumnDefault(value = "false")
+	private boolean Enable;
+	
 	@ColumnDefault(value = "null")
 	private String  password_token;
 	
@@ -46,9 +49,5 @@ public class User {
 	
 	@UpdateTimestamp
 	private Timestamp updated_at;
-	
-	@Temporal(TemporalType.TIMESTAMP)
-	@ColumnDefault(value = "null")
-	private Date email_verified_at;
 	
 }

@@ -1,0 +1,30 @@
+package app.sctp.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import app.sctp.dao.UserRepository;
+import app.sctp.entity.User;
+import app.sctp.security.SecurityConfig;
+
+@RestController
+public class AuthController {
+  
+	
+	@Autowired
+	SecurityConfig securityConfig;
+	
+	@Autowired
+	UserRepository UserRepo;
+	
+	@PostMapping("SignUp")
+	public ResponseEntity<?> signUp(@RequestBody User user){
+	
+		return ResponseEntity.ok().body("userAdded");
+	}
+}

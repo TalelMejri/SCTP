@@ -1,0 +1,5 @@
+package app.sctp.Jwt;
+
+public class JwtRequestFilter {
+
+}

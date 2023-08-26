@@ -1,0 +1,5 @@
+package app.sctp.security;
+
+public class MyUserDetails {
+
+}

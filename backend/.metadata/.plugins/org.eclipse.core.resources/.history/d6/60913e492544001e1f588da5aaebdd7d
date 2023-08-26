@@ -1,0 +1,7 @@
+package Jwt;
+
+import java.io.Serializable;
+
+public class jwtTokenUtil implements Serializable {
+
+}

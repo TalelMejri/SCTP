@@ -1,0 +1,32 @@
+package Jwt;
+
+import java.io.Serializable;
+import java.util.function.Function;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+
+public class jwtTokenUtil implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60;
+	
+	 private static String secret="sctp_secret";
+	 
+	 private Claims getAllClaimsFromToken(String token) {
+		  return Jwts.parser().setSigningKey(secret.getBytes()).parseClaimsJws(token).getBody();
+	 }
+	 
+	 public <T> T getClaimFromToken(String token, Function<Claims, T> claimsResolver) {
+	        final Claims claims = getAllClaimsFromToken(token);
+	        return claimsResolver.apply(claims);
+	  }
+	 
+	  public Date getExpirationDateFromToken(String token) {
+	        return (Date) getClaimFromToken(token,  Claims::getExpiration);
+	  }
+}
