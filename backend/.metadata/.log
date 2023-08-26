@@ -2861,3 +2861,57 @@ Java Model Exception: Java Model Status [src/main/java [in sctp] is not on its p
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-08-26 13:47:16.864
 !MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.GeVEuwEV => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-08-26 13:54:25.024
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-08-26 13:54:25.025
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@3445341[org.springframework.tooling.boot.ls:1.15.0.202001210741(id=632)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-08-26 13:54:25.025
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-08-26 13:54:26.091
+!MESSAGE Boot LS startup time from start to initialized: 1065ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-08-26 13:54:26.112
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.qwUbVgcIisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-08-26 13:54:26.113
+!MESSAGE subscribing to classpath changes: sts4.classpath.qwUbVgcI isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-08-26 13:54:26.114
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-08-26 13:54:26.114
+!MESSAGE subsribers = {sts4.classpath.qwUbVgcI=Send Classpath Notifications(216)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-08-26 13:54:26.115
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-08-26 13:54:26.115
+!MESSAGE project sctp ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-08-26 13:54:26.115
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-08-26 13:54:26.115
+!MESSAGE Preparing classpath changed notification sctp
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-08-26 13:54:26.116
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.qwUbVgcI => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-08-26 13:54:26.116
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-08-26 13:54:26.120
+!MESSAGE classpath=126 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-08-26 13:54:26.124
+!MESSAGE buffering callback sts4.classpath.qwUbVgcI sctp false 126
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-08-26 13:54:26.124
+!MESSAGE executing callback sts4.classpath.qwUbVgcI 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-08-26 13:54:26.143
+!MESSAGE executing callback sts4.classpath.qwUbVgcI SUCCESS [done]
