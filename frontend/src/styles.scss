@@ -1,4 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@import "@angular/material/theming";
+@include mat.core();
 
-html, body { height: 100%; }
+$my-primary: mat.define-palette(mat.$purple-palette, 200);
+$my-accent: mat.define-palette(mat.$teal-palette, 200);
+$my-warn: mat.define-palette(mat.$red-palette);
+
+$my-button-light-color: mat.define-palette(mat.$teal-palette, 500);
+$my-button-dark-color: mat.define-palette(mat.$red-palette, 500);
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+   warn: $my-warn,
+   button: (
+    color: $my-button-light-color
+  )
+ ),
+));
+
+$my-theme-dark: mat.define-dark-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+   warn: $my-warn,
+   button: (
+    color: $my-button-dark-color
+  )
+ ),
+));
+
+.them_dark{
+    @include mat.all-component-themes($my-theme-dark);
+}
+
+.them_light{
+    @include mat.all-component-themes($my-theme);
+}
+
+html, body { height: 100%;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

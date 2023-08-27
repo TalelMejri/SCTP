@@ -1,3 +1,7 @@
-
-
+          
+              <mat-slide-toggle [(ngModel)]="isChecked" (change)="toggle($event)" >
+                    <mat-icon>{{mode}}</mat-icon>
+             </mat-slide-toggle>
+             <br>
+             <button mat-button [routerLink]="['/test']" >test</button>
 <router-outlet></router-outlet>
