@@ -4,9 +4,11 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from "@angular/material/icon"
 import {MatButtonModule }from "@angular/material/button"
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   imports: [
     CommonModule,
+    MatSelectModule,
     MatSlideToggleModule,
     MatButtonModule,
     MatCardModule,
@@ -16,6 +18,8 @@ import {MatButtonModule }from "@angular/material/button"
     MatSlideToggleModule,
     MatCardModule,
     MatIconModule,
-    MatButtonModule]
+    MatButtonModule,
+    MatSelectModule
+  ]
 })
 export class MaterialModule { }

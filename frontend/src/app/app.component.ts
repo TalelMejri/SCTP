@@ -10,12 +10,17 @@ import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 })
 export class AppComponent {
 
-  isChecked=false;
   mode:string="nightlight_round";
-
+  
   toggle(event:MatSlideToggleChange){
-    this.mode=event.checked ?  "light_mode" : "nightlight_round";
-    document.body.classList.toggle('them_dark');
+    this.mode=event.checked ? "light_mode" : "nightlight_round";
+    if(this.mode=="light_mode"){
+      document.body.classList.add('them_dark');
+      document.body.classList.remove('them_light');
+    }else{
+      document.body.classList.add('them_light');
+      document.body.classList.remove('them_dark');
+    }
   }
 
   title = 'frontend';

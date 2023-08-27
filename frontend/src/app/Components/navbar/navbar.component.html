@@ -1,0 +1,41 @@
+<div class="nav">
+    <div class="first_side">
+        <div class="part1">
+            <ul>
+                <li><a href="#">
+                    <mat-icon class="icon">facebook</mat-icon>
+                </a></li>
+                <li><a href="#">
+                    <mat-icon class="icon">facebook</mat-icon>
+                </a></li>
+                <li><a href="#">
+                    <mat-icon class="icon">facebook</mat-icon>
+                </a></li>
+            </ul>
+        </div>
+        <div class="part2">
+            FREE SHIPPING THIS WEEK ORDER OVER - $55
+        </div>
+        <div class="part3">
+            <div class="second">
+                <mat-slide-toggle [(ngModel)]="isChecked" (change)="changeMode.emit($event)">
+                    <mat-icon>{{modeCurrent}}</mat-icon>
+             </mat-slide-toggle>
+            </div>
+            <div class="first">
+                <mat-form-field class="small-form-field">
+                    <mat-label>Language <mat-icon>language</mat-icon></mat-label>
+                      <mat-select >
+                           <mat-option value="test" style="height: 50px;">
+                                   test
+                            </mat-option>
+                            <mat-option  value="test2">
+                               test
+                        </mat-option>
+                    </mat-select>
+                   </mat-form-field>
+            </div>
+          
+        </div>
+    </div>
+</div>
