@@ -8,6 +8,10 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatInputModule} from "@angular/material/input"
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatTreeModule} from '@angular/material/tree';
+import {MatExpansionModule} from '@angular/material/expansion';
 @NgModule({
   imports: [
     CommonModule,
@@ -18,7 +22,11 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatCardModule,
     MatIconModule,
     MatInputModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatTooltipModule,
+    MatMenuModule,
+    MatTreeModule,
+    MatExpansionModule
   ],
   exports:[
     MatSlideToggleModule,
@@ -28,7 +36,11 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatDividerModule,
     MatSelectModule,
     MatInputModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatTooltipModule,
+    MatMenuModule,
+    MatTreeModule,
+    MatExpansionModule
   ]
 })
 export class MaterialModule { }

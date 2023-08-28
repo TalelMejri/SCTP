@@ -1,4 +1,4 @@
-import { Component,Input,Output,EventEmitter} from '@angular/core';
+import { Component,Input,Output,EventEmitter, HostListener} from '@angular/core';
 import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 
 @Component({
@@ -7,9 +7,13 @@ import { MatSlideToggleChange } from '@angular/material/slide-toggle';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-   isChecked=false;
-   @Input() modeCurrent:string="nightlight_round";
 
+   isChecked=false;
+   choseList:string="mat";
+
+ 
+  
+   @Input() modeCurrent:string="nightlight_round";
    @Output() changeMode=new EventEmitter<MatSlideToggleChange>();
 
 

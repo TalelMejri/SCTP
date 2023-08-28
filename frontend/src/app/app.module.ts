@@ -6,11 +6,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './Components/navbar/navbar.component';
+import { HomeComponentComponent } from './Components/home-component/home-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
+    HomeComponentComponent,
 
   ],
   imports: [

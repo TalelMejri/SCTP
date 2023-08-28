@@ -1,56 +1,243 @@
-<div class="nav">
-    <div class="first_side">
-        <div class="part1">
+<div class=" container-fluid shadow d-flex justify-content-center">
+    <div class="first_part row col-lg-12 col-xl-12 py-2 ">
+        <div class="sociel_media col-lg-9 d-none d-lg-block">
             <ul>
-                <li><a href="#">
-                    <mat-icon class="icon">facebook</mat-icon>
-                </a></li>
-                <li><a href="#">
-                    <mat-icon class="icon">facebook</mat-icon>
-                </a></li>
-                <li><a href="#">
-                    <mat-icon class="icon">facebook</mat-icon>
-                </a></li>
+                <li>
+                    <a href="#">
+                       <mat-icon class="facebook_icon">facebook</mat-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                       <img width="25px"  src="../../../assets/images/social_media/instgaram-removebg-preview.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img width="25px"  src="../../../assets/images/social_media/youtube-removebg-preview.png" alt="">
+                    </a>
+                </li>
             </ul>
         </div>
-        <div class="part2">
-            FREE SHIPPING THIS WEEK ORDER OVER - $55
-        </div>
-        <div class="part3">
-            <div class="second">
-                <mat-slide-toggle [(ngModel)]="isChecked" (change)="changeMode.emit($event)">
-                    <mat-icon>{{modeCurrent}}</mat-icon>
-             </mat-slide-toggle>
+        <div class="agence_inscrit col-lg-3 ">
+            <div>
+                <mat-icon class="icon_mat_local">location_on</mat-icon>
+                <p class="mt-1 text"><a href="#" >No Agences</a> </p>
             </div>
-            <div class="first">
-                <mat-form-field class="small-form-field">
-                    <mat-label>Language <mat-icon>language</mat-icon></mat-label>
-                      <mat-select >
-                           <mat-option value="test" style="height: 50px;">
-                                   test
-                            </mat-option>
-                            <mat-option  value="test2">
-                               test
-                        </mat-option>
-                    </mat-select>
-                   </mat-form-field>
+            <div>
+                <mat-icon class="icon_mat">person</mat-icon>
+                <p class="mt-1 text"><a href="#">Connexion</a></p>
             </div>
         </div>
-    </div>
-    <mat-divider id="hr1"></mat-divider>
-    <div class="navEssentiel">
-        <div class="logo">
-            <img src="../../../assets/images/logo.png" alt="">
-        </div>
-        <div class="panier_favorite">
-            <mat-icon class="icon_badge" matBadge="15" matBadgeColor="warn">favorite</mat-icon>
-            <mat-icon class="icon_badge"  matBadge="15" matBadgeColor="warn">local_mall</mat-icon>
-        </div>
-    </div>
-    <mat-divider id="hr1" style="margin-top: -50px;"></mat-divider>
-    <div class="linked">
-        <p>Home</p>
-        <p>Categories</p>
-        <p>Bloc</p>
     </div>
 </div>
+
+<!-- nav -->
+<div class="test_navbar" > 
+    <div class="row m-2 p-2">
+        <div class="image_logo col-lg-2 text-center mb-2">
+            <img width="200px" height="150px"  src="../../../assets/images/logo.png" alt="">
+        </div>
+        <div class="col-lg-10">
+            <div class="row gap-5 text-center">
+                <div class="col-lg-8 text-center mx-3">
+                    <input class="form-control" placeholder="Search For Produit" type="search">
+                </div>
+                <div class="col-lg-2">
+                    <div class="d-flex gap-5 justify-content-center ">
+                        <div>
+                            <mat-icon   matTooltip="Favorite Produit"  style="color:red;font-size: 30px;cursor: pointer;" matBadge="0" matBadgeColor="warn">favorite</mat-icon>
+                        </div>
+                        <div >
+                            <mat-icon   matTooltip="Panier" style="color:#000;font-size: 30px;cursor: pointer;"  matBadge="1" matBadgeColor="accent">shopping_cart</mat-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar_perso">
+         <div >
+            <div class="small_ecran">
+                <mat-icon 
+                     matTooltip="Menu"
+                     type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" class="icon_mat">
+                  menu
+                </mat-icon>
+            </div>
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <mat-accordion>
+                        <mat-expansion-panel class="mb-3" >
+                          <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Matériaux De Construction
+                            </mat-panel-title>
+                          </mat-expansion-panel-header>
+                          <p>test</p>
+                        </mat-expansion-panel>
+                        <mat-expansion-panel class="mb-3">
+                          <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Equipements & Matériels
+                            </mat-panel-title>
+                          </mat-expansion-panel-header>
+                        </mat-expansion-panel>
+                        <mat-expansion-panel class="mb-3" >
+                            <mat-expansion-panel-header>
+                              <mat-panel-title>
+                                Salles de Bain & Cuisine
+                              </mat-panel-title>
+                            </mat-expansion-panel-header>
+                          </mat-expansion-panel>
+                          <mat-expansion-panel  class="mb-3">
+                            <mat-expansion-panel-header>
+                              <mat-panel-title>
+                                Extérieur & jardin
+                              </mat-panel-title>
+                            </mat-expansion-panel-header>
+                          </mat-expansion-panel>
+                          <mat-expansion-panel class="mb-3" >
+                            <mat-expansion-panel-header>
+                              <mat-panel-title>
+                                Deco & éclairage
+                              </mat-panel-title>
+                            </mat-expansion-panel-header>
+                          </mat-expansion-panel>
+                          <mat-expansion-panel  class="mb-3">
+                            <mat-expansion-panel-header>
+                              <mat-panel-title>
+                                Plaques & plafonds
+                              </mat-panel-title>
+                            </mat-expansion-panel-header>
+                          </mat-expansion-panel>
+                          <mat-expansion-panel  class="mb-3">
+                            <mat-expansion-panel-header>
+                              <mat-panel-title>
+                                chauffage & plomberie
+                              </mat-panel-title>
+                            </mat-expansion-panel-header>
+                          </mat-expansion-panel>
+                      </mat-accordion>
+                </div>
+              </div>
+            <div class="large_ecran">
+                <ul>
+                    <li><a [matMenuTriggerFor]="menu"  href="#" [style.color]="choseList=='mat' ? 'blue' : ''" (click)="choseList='mat'">Matériaux De Construction</a></li>
+                      <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                          <mat-icon>dialpad</mat-icon>
+                          <span>menu1</span>
+                        </button>
+                        <button mat-menu-item disabled>
+                          <mat-icon>voicemail</mat-icon>
+                          <span>Check voice mail</span>
+                        </button>
+                        <button mat-menu-item>
+                          <mat-icon>notifications_off</mat-icon>
+                          <span>Disable alerts</span>
+                        </button>
+                      </mat-menu>
+                    <li><a href="#" [matMenuTriggerFor]="menu2"  [style.color]="choseList=='equip' ? 'blue' : ''" (click)="choseList='equip'">Equipements & Matériels </a></li>
+                        <mat-menu #menu2="matMenu">
+                        <button mat-menu-item>
+                          <span>menu2</span>
+                        </button>
+                        <button mat-menu-item disabled>
+                          <span>Check voice mail</span>
+                        </button>
+                        <button mat-menu-item>
+                          <span>Disable alerts</span>
+                        </button>
+                      </mat-menu>
+                    <li><a href="#" [matMenuTriggerFor]="menu3"  [style.color]="choseList=='salle' ? 'blue' : ''" (click)="choseList='salle'">Salles de Bain & Cuisine</a></li>
+                     <mat-menu #menu3="matMenu">
+                        <button mat-menu-item>
+                          <mat-icon>dialpad</mat-icon>
+                          <span>menu3</span>
+                        </button>
+                        <button mat-menu-item disabled>
+                          <mat-icon>voicemail</mat-icon>
+                          <span>Check voice mail</span>
+                        </button>
+                        <button mat-menu-item>
+                          <mat-icon>notifications_off</mat-icon>
+                          <span>Disable alerts</span>
+                        </button>
+                      </mat-menu>
+                    <li><a href="#" [matMenuTriggerFor]="menu4"  [style.color]="choseList=='extr' ? 'blue' : ''" (click)="choseList='extr'">Extérieur & jardin</a></li>
+                     <mat-menu #menu4="matMenu">
+                        <button mat-menu-item>
+                          <mat-icon>dialpad</mat-icon>
+                          <span>menu4</span>
+                        </button>
+                        <button mat-menu-item disabled>
+                          <mat-icon>voicemail</mat-icon>
+                          <span>Check voice mail</span>
+                        </button>
+                        <button mat-menu-item>
+                          <mat-icon>notifications_off</mat-icon>
+                          <span>Disable alerts</span>
+                        </button>
+                      </mat-menu>
+                    <li><a href="#" [matMenuTriggerFor]="menu5"  [style.color]="choseList=='deco' ? 'blue' : ''" (click)="choseList='deco'">Deco & éclairage</a></li>
+                        <mat-menu #menu5="matMenu">
+                        <button mat-menu-item>
+                          <mat-icon>dialpad</mat-icon>
+                          <span>menu5</span>
+                        </button>
+                        <button mat-menu-item disabled>
+                          <mat-icon>voicemail</mat-icon>
+                          <span>Check voice mail</span>
+                        </button>
+                        <button mat-menu-item>
+                          <mat-icon>notifications_off</mat-icon>
+                          <span>Disable alerts</span>
+                        </button>
+                      </mat-menu>
+                    <li><a href="#" [matMenuTriggerFor]="menu6"  [style.color]="choseList=='plaques' ? 'blue' : ''" (click)="choseList='plaques'">Plaques & plafonds</a></li>
+                      <mat-menu #menu6="matMenu">
+                        <button mat-menu-item>
+                          <mat-icon>dialpad</mat-icon>
+                          <span>menu6</span>
+                        </button>
+                        <button mat-menu-item disabled>
+                          <mat-icon>voicemail</mat-icon>
+                          <span>Check voice mail</span>
+                        </button>
+                        <button mat-menu-item>
+                          <mat-icon>notifications_off</mat-icon>
+                          <span>Disable alerts</span>
+                        </button>
+                      </mat-menu>
+                    <li><a href="#" [matMenuTriggerFor]="menu7" [style.color]="choseList=='chauffage' ? 'blue' : ''" (click)="choseList='chauffage'">chauffage & plomberie</a></li>
+                        <mat-menu #menu7="matMenu">
+                        <button mat-menu-item>
+                          <mat-icon>dialpad</mat-icon>
+                          <span>menu7</span>
+                        </button>
+                        <button mat-menu-item disabled>
+                          <mat-icon>voicemail</mat-icon>
+                          <span>Check voice mail</span>
+                        </button>
+                        <button mat-menu-item>
+                          <mat-icon>notifications_off</mat-icon>
+                          <span>Disable alerts</span>
+                        </button>
+                      </mat-menu>
+                </ul>
+            </div>
+         </div>
+         <div>
+            <a  class="bonne_affaires" chref="#">
+                Les Bonnes Affaire
+            </a>
+         </div>
+    </div>
+</div>
+
+
