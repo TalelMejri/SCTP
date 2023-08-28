@@ -7,12 +7,16 @@ import { MaterialModule } from './material/material.module';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { HomeComponentComponent } from './Components/home-component/home-component.component';
+import { NosMarqueCompComponent } from './Components/home-component/nos-marque-comp/nos-marque-comp.component';
+import { FoooterCompoComponent } from './Components/foooter-compo/foooter-compo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponentComponent,
+    NosMarqueCompComponent,
+    FoooterCompoComponent,
 
   ],
   imports: [

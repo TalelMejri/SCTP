@@ -22,3 +22,102 @@
         </button>
       </div>
 </div>
+
+<div class="services">
+  <div>
+     <img  width="150px" src="../../../assets/images/livraison.png" alt="">
+     <p class="text-center">Livraison</p>
+  </div>
+  <div>
+    <img width="100px" src="../../../assets/images/medal.png" alt="">
+    <p class="text-center">+300 Marques</p>
+ </div>
+ <div>
+  <img  width="130px" src="../../../assets/images/profuits.png" alt="">
+  <p class="text-center">+1000 Produits</p>
+</div>
+</div>
+
+<mat-card class="example-card m-2">
+  <div class="text-center py-5 ">
+    <p style="font-weight: 600;font-size: 25px;">Notre Sélection</p>
+    <p  style="font-weight: 100;font-size: 25px;">ARTICLES LES PLUS DEMANDés</p>
+  </div>
+  <mat-card-content class="mt-5 py-2">
+    <div class="horizontal-scroll-container">
+    <div class="boxes">
+      <div class="box" *ngFor="let item of Produits;let i=index "  (click)="scrollToCard(i)">
+        <div class="image">
+          <p class="promo-label">Promo</p>
+          <img src="../../../assets/logo.png" alt="">
+        </div>
+        <div class="content">
+          <div class="text">
+            <p>Product Description</p>
+          </div>
+          <div class="rates">
+            <mat-icon class="star-icon">star</mat-icon>
+            <mat-icon class="star-icon">star</mat-icon>
+            <mat-icon class="star-icon">star</mat-icon>
+            <mat-icon class="star-icon">star</mat-icon>
+            <mat-icon class="star-icon">star</mat-icon>
+          </div>
+          <div class="prix">
+            5,999 DT
+          </div>
+        </div>
+        <div class="action">
+          <button class="btn btn-outline-primary add-to-cart-btn">
+            <p class="pt-2">Ajouter au panier</p>
+            <mat-icon>shopping_cart</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </mat-card-content>
+</mat-card >
+
+
+<mat-card class="example-card m-2 mt-2">
+  <div class="text-center py-5 ">
+    <p style="font-weight: 600;font-size: 25px;color:red">Afariat Sif</p>
+    <p  style="font-weight: 100;font-size: 25px;">TOUS NOS OFFRES</p>
+  </div>
+  <mat-card-content class="mt-5 py-2">
+    <div class="horizontal-scroll-container">
+    <div class="boxes">
+      <div class="box" *ngFor="let item of Produits;let i=index "  (click)="scrollToCard(i)">
+        <div class="image">
+          <p class="promo-label">Promo</p>
+          <img src="../../../assets/logo.png" alt="">
+        </div>
+        <div class="content">
+          <div class="text">
+            <p>Product Description</p>
+          </div>
+          <div class="rates">
+            <mat-icon class="star-icon">star</mat-icon>
+            <mat-icon class="star-icon">star</mat-icon>
+            <mat-icon class="star-icon">star</mat-icon>
+            <mat-icon class="star-icon">star</mat-icon>
+            <mat-icon class="star-icon">star</mat-icon>
+          </div>
+          <div class="prix">
+            5,999 DT
+          </div>
+        </div>
+        <div class="action">
+          <button class="btn btn-outline-primary add-to-cart-btn">
+            <p class="pt-2">Ajouter au panier</p>
+            <mat-icon>shopping_cart</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </mat-card-content>
+</mat-card >
+<app-nos-marque-comp></app-nos-marque-comp>
+
+
