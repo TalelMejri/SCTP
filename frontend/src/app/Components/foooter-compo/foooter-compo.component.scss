@@ -1,0 +1,42 @@
+.socialmedia{
+    ul{
+        display: flex;
+        justify-content: center;
+        li{
+            list-style-type: none;
+            margin-right: 35px;
+         }
+         a{
+            font-size: 20px;
+            transition: all 0.3s ease-in-out;
+         }
+    }
+    
+}
+
+.text_footer{
+    span{
+        color: blue;
+        font-weight: 400;
+    }
+}
+
+.text_list{
+    ul{
+        display: flex;
+        justify-content: center;
+        li{
+            margin-right: 35px;
+            list-style-type: none;
+            a{
+                text-decoration: none;
+                color: #000;
+                font-weight: 600;
+            }
+            a:hover{
+                color: blue;
+            }
+        }
+    }
+    
+}
