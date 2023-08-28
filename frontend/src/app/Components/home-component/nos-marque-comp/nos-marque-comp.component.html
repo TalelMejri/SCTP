@@ -1,0 +1,17 @@
+<div class="container mb-5 mt-2">
+    <div class="text-center">
+        <p >Les meilleures marques pour tous vos projets</p>
+        <p >Toutes nos marques <mat-icon>arrow_forward</mat-icon></p>
+    </div>
+    <div>
+        <div class="horizontal_marques mt-4 py-2">
+             <div class="marques">
+                 <div class="marque" *ngFor="let item of marques;let i=index" (click)="scroolto(i)">
+                        <img [src]="item" alt="">
+                 </div>
+             </div>
+        </div>
+    </div>
+</div>
+<mat-divider></mat-divider>
+```
