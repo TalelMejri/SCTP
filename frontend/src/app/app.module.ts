@@ -9,6 +9,7 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { HomeComponentComponent } from './Components/home-component/home-component.component';
 import { NosMarqueCompComponent } from './Components/home-component/nos-marque-comp/nos-marque-comp.component';
 import { FoooterCompoComponent } from './Components/foooter-compo/foooter-compo.component';
+import { SignUpCompComponent } from './Components/Auth/sign-up-comp/sign-up-comp.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FoooterCompoComponent } from './Components/foooter-compo/foooter-compo.
     HomeComponentComponent,
     NosMarqueCompComponent,
     FoooterCompoComponent,
+    SignUpCompComponent,
 
   ],
   imports: [

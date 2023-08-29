@@ -1,0 +1,69 @@
+<div class="container mb-5 mt-2">
+     <h2 class="py-2">CRÉEZ VOTRE COMPTE</h2>
+     <form class="shadow-lg p-4 rounded">
+        <div class="row">
+            <div class="col-lg-6 ">
+                <mat-form-field class="example-form-field" style="width: 100%;">
+                    <mat-label>Nom</mat-label>
+                    <input matInput type="text" >
+                  </mat-form-field>
+            </div>
+            <div class="col-lg-6">
+                <mat-form-field class="example-form-field" style="width: 100%;">
+                    <mat-label>Prénom</mat-label>
+                    <input matInput type="text" >
+                  </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <mat-form-field class="example-form-field" style="width: 100%;">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="text" >
+                  </mat-form-field>
+            </div>
+            <div class="col-lg-6">
+                <mat-form-field class="example-form-field" style="width: 100%;">
+                    <mat-label>Mot De Pass</mat-label>
+                    <input matInput type="text">
+                    <button  matSuffix mat-icon-button>
+                       <mat-icon>close</mat-icon>
+                    </button>
+                  </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <label id="example-radio-group-label">Civilité</label>
+                <mat-radio-group aria-label="Civilité">
+                    <mat-radio-button value="M">M</mat-radio-button>
+                    <mat-radio-button value="Mme">Mme</mat-radio-button>
+                  </mat-radio-group>
+            </div>
+            <div class="col-lg-6">
+                <mat-form-field class="example-form-field" style="width: 100%;">
+                    <mat-label>Mobile</mat-label>
+                    <input matInput type="text" >
+                  </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row code_sec">
+            <div class="col-lg-6">
+                <p>{{codeSec}}</p>
+                &nbsp;
+                <mat-icon (click)="anotherCode()" class="iconRefresh" style="color: green;">refresh</mat-icon>
+            </div>
+            <div class="col-lg-6">
+                <mat-form-field class="example-form-field" style="width: 100%;">
+                    <input matInput type="text" >
+                  </mat-form-field>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-success">S'INCRIRE</button>
+        </div>
+     </form>
+</div>

@@ -12,6 +12,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTreeModule} from '@angular/material/tree';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatRadioModule} from '@angular/material/radio';
 @NgModule({
   imports: [
     CommonModule,
@@ -26,7 +27,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatTooltipModule,
     MatMenuModule,
     MatTreeModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatRadioModule
   ],
   exports:[
     MatSlideToggleModule,
@@ -40,7 +42,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatTooltipModule,
     MatMenuModule,
     MatTreeModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatRadioModule
   ]
 })
 export class MaterialModule { }

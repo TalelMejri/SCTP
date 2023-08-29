@@ -24,10 +24,14 @@
                 <mat-icon class="icon_mat_local">location_on</mat-icon>
                 <p class="mt-1 text"><a href="#" >No Agences</a> </p>
             </div>
-            <div>
+            <div [matMenuTriggerFor]="menu">
                 <mat-icon class="icon_mat">person</mat-icon>
                 <p class="mt-1 text"><a href="#">Connexion</a></p>
             </div>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Login &nbsp; <mat-icon>person</mat-icon></button>
+              <button routerLink="signup" mat-menu-item>SignUp &nbsp; <mat-icon>app_registration</mat-icon></button>
+            </mat-menu>
         </div>
     </div>
 </div>
