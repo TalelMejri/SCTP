@@ -13,14 +13,14 @@ export class SignUpCompComponent {
     this.codeSec=Math.random().toString(36).substring(2,8) + Math.random().toString(36).substring(2, 2);
   }
 
-  constructor(private MatSnackBar:MatSnackBar,private formbuilder:FormBuilder,private ServicesService:ServicesService){
+  constructor(private snack:MatSnackBar,private formbuilder:FormBuilder,private ServicesService:ServicesService){
     this.SignUpRegister=this.formbuilder.group({
       nom:this.nameRegister,
       prenom:this.prenomRegister,
       email:this.emailRegister,
       password:this.passwordRegister,
       code:this.codeRegister,
-      mobile:this.mobileRegister,
+      num_tlf:this.mobileRegister,
       sex:this.sexRegister,
     })
   }
@@ -132,8 +132,10 @@ export class SignUpCompComponent {
 
   SignUp(){
     if(this.SignUpRegister.valid){
-        this.ServicesService.singup(this.SignUpRegister.value).subscribe((res)=>{
-            this.MatSnackBar.open('Account created successfully','Close',{duration:2000});
+        this.ServicesService.singup(this.SignUpRegister.value).subscribe((res:any)=>{
+          console.log(res);
+        },(err)=>{
+          this.snack.open('Account created successfully','Close',{duration:2000});
         });
     }else{
       this.SignUpRegister.markAllAsTouched();

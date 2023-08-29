@@ -11,6 +11,6 @@ export class ServicesService {
   constructor(private http:HttpClient) { }
 
   singup(User:User){
-    return this.http.post(`${environment.apiBaseUrl}/auth/signup`,User);
+    return this.http.post(`${environment.apiBaseUrl}auth/SignUp`,User);
   }
 }
