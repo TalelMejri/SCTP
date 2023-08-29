@@ -12,8 +12,8 @@ export class HomeComponentComponent {
     this.index_image=i;
   } 
   
-  scrollToCard(cardIndex: number) {
-    const cardElement = document.getElementsByClassName('box')[cardIndex] as HTMLElement;
+  scrollToCard(cardIndex: number,classname:string) {
+    const cardElement = document.getElementsByClassName(classname)[cardIndex] as HTMLElement;
     if (cardElement) {
       cardElement.scrollIntoView({ behavior: 'smooth', inline: 'center' });
     }

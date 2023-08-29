@@ -46,7 +46,7 @@
   <mat-card-content class="mt-5 py-2">
     <div class="horizontal-scroll-container">
     <div class="boxes">
-      <div class="box" *ngFor="let item of Produits;let i=index "  (click)="scrollToCard(i)">
+      <div class="box" *ngFor="let item of Produits;let i=index "  (click)="scrollToCard(i,'box')">
         <div class="image">
           <p class="promo-label">Promo</p>
           <img src="../../../assets/logo.png" alt="">
@@ -87,7 +87,7 @@
   <mat-card-content class="mt-5 py-2">
     <div class="horizontal-scroll-container">
     <div class="boxes">
-      <div class="box" *ngFor="let item of Produits;let i=index "  (click)="scrollToCard(i)">
+      <div class="boxe" *ngFor="let item of Produits;let i=index "  (click)="scrollToCard(i,'boxe')">
         <div class="image">
           <p class="promo-label">Promo</p>
           <img src="../../../assets/logo.png" alt="">

@@ -33,11 +33,7 @@ public class User {
 	
 	private String prenom;
 	
-	private String sex;
-	
 	private String password;
-	
-	private String num_tlf;
 	
 	private String role;
 	

@@ -37,8 +37,6 @@ public class User {
 	
 	private String password;
 	
-	private String num_tlf;
-	
 	private String role;
 	
 	@ColumnDefault(value = "false")

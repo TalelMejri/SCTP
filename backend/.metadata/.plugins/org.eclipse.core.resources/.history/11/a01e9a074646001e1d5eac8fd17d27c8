@@ -51,7 +51,6 @@ public class AuthController {
 		user_new.setRole("Client");
 		user_new.setNom(user.getNom());
 		user_new.setPrenom(user.getPrenom());
-		user_new.setNum_tlf(user.getNum_tlf());
 		user_new.setPassword(securityConfig.passwordEncoder().encode(user.getPassword()));
 		UserRepo.save(user_new);
 		return ResponseEntity.ok().body("userAdded");
