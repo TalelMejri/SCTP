@@ -1,55 +1,68 @@
 <div class="container mb-5 mt-2">
      <h2 class="py-2">CRÉEZ VOTRE COMPTE</h2>
-     <form class="shadow-lg p-4 rounded">
+     <form [formGroup]="SignUpRegister" (ngSubmit)="SignUp()" class="shadow-lg p-4 rounded">
         <div class="row">
             <div class="col-lg-6 ">
                 <mat-form-field class="example-form-field" style="width: 100%;">
                     <mat-label>Nom</mat-label>
-                    <input matInput type="text" >
+                    <input matInput type="text" [formControl]="nameRegister">
+                    <mat-error *ngIf="nameRegister.invalid">
+                        {{getNameError()}}
+                    </mat-error>
                   </mat-form-field>
             </div>
             <div class="col-lg-6">
                 <mat-form-field class="example-form-field" style="width: 100%;">
                     <mat-label>Prénom</mat-label>
-                    <input matInput type="text" >
+                    <input matInput type="text" [formControl]="prenomRegister">
+                    <mat-error *ngIf="prenomRegister.invalid">
+                        {{getPrenomError()}}
+                    </mat-error>
                   </mat-form-field>
             </div>
         </div>
-
         <div class="row">
             <div class="col-lg-6">
                 <mat-form-field class="example-form-field" style="width: 100%;">
                     <mat-label>Email</mat-label>
-                    <input matInput type="text" >
+                    <input matInput type="text"  [formControl]="emailRegister">
+                    <mat-error *ngIf="emailRegister.invalid">
+                         {{getEmailError()}}
+                      </mat-error>
                   </mat-form-field>
             </div>
             <div class="col-lg-6">
                 <mat-form-field class="example-form-field" style="width: 100%;">
                     <mat-label>Mot De Pass</mat-label>
-                    <input matInput type="text">
+                    <input matInput type="text" [formControl]="passwordRegister">
                     <button  matSuffix mat-icon-button>
                        <mat-icon>close</mat-icon>
                     </button>
+                    <mat-error *ngIf="passwordRegister.invalid">
+                        {{getPasswordError()}}
+                    </mat-error>
                   </mat-form-field>
             </div>
         </div>
-
         <div class="row">
             <div class="col-lg-6">
                 <label id="example-radio-group-label">Civilité</label>
-                <mat-radio-group aria-label="Civilité">
+                <mat-radio-group aria-label="Civilité" [formControl]="sexRegister">
                     <mat-radio-button value="M">M</mat-radio-button>
                     <mat-radio-button value="Mme">Mme</mat-radio-button>
                   </mat-radio-group>
+                  <mat-error>{{getSexError()}}</mat-error>
             </div>
             <div class="col-lg-6">
                 <mat-form-field class="example-form-field" style="width: 100%;">
                     <mat-label>Mobile</mat-label>
-                    <input matInput type="text" >
+                    <input matInput type="text"  [formControl]="mobileRegister">
+                    <mat-error *ngIf="mobileRegister.invalid">
+                        {{getMobileError()}}
+                    </mat-error>
                   </mat-form-field>
             </div>
         </div>
-
         <div class="row code_sec">
             <div class="col-lg-6">
                 <p>{{codeSec}}</p>
@@ -58,7 +71,8 @@
             </div>
             <div class="col-lg-6">
                 <mat-form-field class="example-form-field" style="width: 100%;">
-                    <input matInput type="text" >
+                    <input matInput type="text" [formControl]="codeRegister">
+                    <mat-error>{{getcodeError()}}</mat-error>
                   </mat-form-field>
             </div>
         </div>
