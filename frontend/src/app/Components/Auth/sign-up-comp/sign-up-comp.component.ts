@@ -8,6 +8,9 @@ import {MatSnackBar} from '@angular/material/snack-bar';
   styleUrls: ['./sign-up-comp.component.scss']
 })
 export class SignUpCompComponent {
+
+
+  hidden:boolean=true;
   codeSec:string=Math.random().toString(36).substring(2,8) + Math.random().toString(36).substring(2, 2);
   anotherCode(){
     this.codeSec=Math.random().toString(36).substring(2,8) + Math.random().toString(36).substring(2, 2);

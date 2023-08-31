@@ -34,9 +34,9 @@
             <div class="col-lg-6">
                 <mat-form-field class="example-form-field" style="width: 100%;">
                     <mat-label>Mot De Pass</mat-label>
-                    <input matInput type="text" [formControl]="passwordRegister">
-                    <button  matSuffix mat-icon-button>
-                       <mat-icon>close</mat-icon>
+                    <input matInput [type]="!hidden ? 'text' : 'password'" [formControl]="passwordRegister">
+                    <button  matSuffix mat-icon-button (click)="hidden=!hidden">
+                       <mat-icon>{{ hidden ? 'visibility'  : 'visibility_off' }}</mat-icon>
                     </button>
                     <mat-error *ngIf="passwordRegister.invalid">
                         {{getPasswordError()}}

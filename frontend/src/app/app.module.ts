@@ -11,6 +11,13 @@ import { NosMarqueCompComponent } from './Components/home-component/nos-marque-c
 import { FoooterCompoComponent } from './Components/foooter-compo/foooter-compo.component';
 import { SignUpCompComponent } from './Components/Auth/sign-up-comp/sign-up-comp.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginCompComponent } from './Components/Auth/login-comp/login-comp.component';
+import { NgxsModule } from '@ngxs/store';
+import { AuthStore } from './Store/actions';
+import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
+import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
+import { DashboardComponent } from './AdminSide/dashboard/dashboard.component';
+
 
 
 @NgModule({
@@ -21,6 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     NosMarqueCompComponent,
     FoooterCompoComponent,
     SignUpCompComponent,
+    LoginCompComponent,
+    DashboardComponent,
 
   ],
   imports: [
@@ -30,7 +39,10 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxsModule.forRoot([AuthStore]),
+    NgxsStoragePluginModule.forRoot(),
+    NgxsReduxDevtoolsPluginModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
