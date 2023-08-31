@@ -20,17 +20,30 @@
             </ul>
         </div>
         <div class="agence_inscrit col-lg-3 ">
-            <div>
+            <div >
                 <mat-icon class="icon_mat_local">location_on</mat-icon>
                 <p class="mt-1 text"><a href="#" >No Agences</a> </p>
             </div>
-            <div [matMenuTriggerFor]="menu">
+            <div [matMenuTriggerFor]="menu" *ngIf="!(AuthServiceService.isLogin | async)">
                 <mat-icon class="icon_mat">person</mat-icon>
                 <p class="mt-1 text"><a href="#">Connexion</a></p>
             </div>
             <mat-menu #menu="matMenu">
-              <button mat-menu-item>Login &nbsp; <mat-icon>person</mat-icon></button>
+              <button  routerLink="login" mat-menu-item>Login &nbsp; <mat-icon>person</mat-icon></button>
               <button routerLink="signup" mat-menu-item>SignUp &nbsp; <mat-icon>app_registration</mat-icon></button>
+            </mat-menu>
+            <div  *ngIf="AuthServiceService.isLogin | async">
+              <div class="example-button-container">
+                <button  [matMenuTriggerFor]="menuuser"   matTooltip="User" mat-mini-fab  aria-label="Example icon button with a home icon">
+                  <mat-icon>person</mat-icon>
+                </button>
+              </div>
+            </div>
+            <mat-menu #menuuser="matMenu">
+               <div class="m-2 text-center">
+                <p>{{User['nom']}} {{User['prenom']}}</p>
+                <mat-icon  (click)="LogoutUser()"  matTooltip="Logout" style="color:#000;font-size: 30px;cursor: pointer;"  >logout</mat-icon>
+              </div>
             </mat-menu>
         </div>
     </div>
@@ -48,8 +61,8 @@
                     <input class="form-control" placeholder="Search For Produit" type="search">
                 </div>
                 <div class="col-lg-2">
-                    <div class="d-flex gap-5 justify-content-center ">
-                        <div>
+                    <div class="d-flex gap-4 justify-content-center ">
+                        <div  *ngIf="AuthServiceService.isLogin | async">
                             <mat-icon   matTooltip="Favorite Produit"  style="color:red;font-size: 30px;cursor: pointer;" matBadge="0" matBadgeColor="warn">favorite</mat-icon>
                         </div>
                         <div >
