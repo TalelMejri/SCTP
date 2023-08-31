@@ -24,9 +24,11 @@
                 <mat-icon class="icon_mat_local">location_on</mat-icon>
                 <p class="mt-1 text"><a href="#" >No Agences</a> </p>
             </div>
-            <div [matMenuTriggerFor]="menu" *ngIf="!(AuthServiceService.isLogin | async)">
+            <div *ngIf="!(AuthServiceService.isLogin | async)">
+              <div [matMenuTriggerFor]="menu">
                 <mat-icon class="icon_mat">person</mat-icon>
                 <p class="mt-1 text"><a href="#">Connexion</a></p>
+              </div>
             </div>
             <mat-menu #menu="matMenu">
               <button  routerLink="login" mat-menu-item>Login &nbsp; <mat-icon>person</mat-icon></button>
@@ -39,9 +41,9 @@
                 </button>
               </div>
             </div>
-            <mat-menu #menuuser="matMenu">
+            <mat-menu #menuuser="matMenu"  >
                <div class="m-2 text-center">
-                <p>{{User['nom']}} {{User['prenom']}}</p>
+                <p *ngIf="AuthServiceService.isLogin | async">{{User['nom']}} {{User['prenom']}}</p>
                 <mat-icon  (click)="LogoutUser()"  matTooltip="Logout" style="color:#000;font-size: 30px;cursor: pointer;"  >logout</mat-icon>
               </div>
             </mat-menu>
