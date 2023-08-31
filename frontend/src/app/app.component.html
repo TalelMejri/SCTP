@@ -1,4 +1,4 @@
 
-<app-navbar (changeMode)="toggle($event)" [modeCurrent]="mode"></app-navbar>
+<app-navbar *ngIf="showModeAdmin === false" (changeMode)="toggle($event)" [modeCurrent]="mode"></app-navbar>
 <router-outlet></router-outlet>
-<app-foooter-compo></app-foooter-compo>
+<app-foooter-compo *ngIf="showModeAdmin === false"></app-foooter-compo>

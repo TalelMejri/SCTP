@@ -1,5 +1,5 @@
 
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 
 
@@ -8,10 +8,13 @@ import { MatSlideToggleChange } from '@angular/material/slide-toggle';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-
+export class AppComponent implements OnInit {
+ 
   mode:string="nightlight_round";
-  
+  showModeAdmin:Boolean=false;
+  ngOnInit(): void {
+    this.showModeAdmin=localStorage.getItem("ModeAdmin")=="true" ? true : false;
+  }
   toggle(event:MatSlideToggleChange){
     this.mode=event.checked ? "light_mode" : "nightlight_round";
     if(this.mode=="light_mode"){

@@ -41,7 +41,7 @@
                 </button>
               </div>
             </div>
-            <mat-menu #menuuser="matMenu"  >
+            <mat-menu #menuuser="matMenu">
                <div class="m-2 text-center">
                 <p *ngIf="AuthServiceService.isLogin | async">{{User['nom']}} {{User['prenom']}}</p>
                 <mat-icon  (click)="LogoutUser()"  matTooltip="Logout" style="color:#000;font-size: 30px;cursor: pointer;"  >logout</mat-icon>

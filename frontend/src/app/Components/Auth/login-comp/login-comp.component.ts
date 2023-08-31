@@ -57,6 +57,7 @@ export class LoginCompComponent {
         if(res.user["role"]=="Client"){
           this.Router.navigate([""]);
         }else{
+          localStorage.setItem("ModeAdmin","true");
           this.Router.navigate(['dashboard']);
         }
         this.MatSnackBar.open('correct','close',{
