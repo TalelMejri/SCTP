@@ -15,9 +15,4 @@ export class AdminModuleComponent implements OnInit {
 
   }
 
-  isSidebarOpen = false;
-  toggleSidebar() {
-    this.isSidebarOpen = !this.isSidebarOpen;
-  }
-  
 }

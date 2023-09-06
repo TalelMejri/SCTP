@@ -1,13 +1,13 @@
 <aside id="sidebar" class="sidebar" [ngClass]="{'sidebar-open': isSidebarOpen}">
     <ul class="sidebar-nav" id="sidebar-nav">
       <li class="nav-item">
-        <a class="nav-link" (click)="link='dash'"  [routerLink]="['dash']">
+        <a class="nav-link" [style.color]="link=='Dashboard' ? 'blue' : 'black'" (click)="changeLink('Dashboard')"  [routerLink]="['dash']">
           <mat-icon>home</mat-icon>
           <span>Dashboard</span>
         </a>
       </li>
-      <li class="nav-item" [style.color]="link=='cat' ? 'blue' : 'black'">
-        <a class="nav-link" (click)="link='cat'" [routerLink]="['categorie']" >
+      <li class="nav-item" [style.color]="link=='addCategorie' ? 'blue' : 'black'">
+        <a class="nav-link"  (click)="changeLink('addCategorie')" [routerLink]="['addCat']">
           <mat-icon>add</mat-icon>
           <span>Add Categorie</span>
         </a>

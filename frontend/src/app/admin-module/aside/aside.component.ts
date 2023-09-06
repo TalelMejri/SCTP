@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input ,Output,EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-aside',
@@ -7,6 +7,12 @@ import { Component, Input } from '@angular/core';
 })
 export class AsideComponent {
 
-   link:String="dash";
-  @Input() public isSidebarOpen=false;
+   @Input() link:String="Dashboard";
+   @Input() public isSidebarOpen=false;
+   @Output() changerlink=new EventEmitter<string>();
+
+   changeLink(newLink: string) {
+    this.link = newLink;
+    this.changerlink.emit(newLink); 
+  }
 }

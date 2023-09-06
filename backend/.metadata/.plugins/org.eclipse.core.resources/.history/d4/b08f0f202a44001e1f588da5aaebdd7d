@@ -1,9 +1,0 @@
-package app.sctp.Jwt;
-
-import java.io.Serializable;
-
-import org.springframework.security.web.AuthenticationEntryPoint;
-
-public class JwtEntryPoint implements AuthenticationEntryPoint,Serializable {
-
-}

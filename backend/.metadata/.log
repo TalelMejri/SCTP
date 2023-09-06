@@ -4444,3 +4444,18 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-09-06 11:12:33.726
 !MESSAGE executing callback sts4.classpath.FRYDCsOR SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-09-06 14:59:34.420
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.FRYDCsOR
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-09-06 14:59:34.420
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.FRYDCsOR
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-09-06 14:59:34.421
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-09-06 14:59:34.421
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.FRYDCsOR => OK
+
+!ENTRY org.eclipse.ui 2 2 2023-09-06 14:59:34.933
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)

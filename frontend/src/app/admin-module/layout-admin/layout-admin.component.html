@@ -1,0 +1,18 @@
+<app-navbar (sidebarAction)="toggleSidebar()" ></app-navbar>
+<app-aside [isSidebarOpen]="isSidebarOpen" [link]="link" (changerlink)="changerlink($event)"></app-aside>
+<main id="main" class="main" [ngClass]="{'main-shifted': isSidebarOpen}">
+    <div class="pagetitle">
+      <h1>{{link}}</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">{{link}}</li>
+        </ol>
+      </nav> 
+          <router-outlet></router-outlet>
+     </div>
+</main> 
+
+
+
+

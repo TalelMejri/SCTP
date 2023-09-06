@@ -1,5 +1,0 @@
-package Jwt;
-
-public class JwtRequestFilter {
-
-}

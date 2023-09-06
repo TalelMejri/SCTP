@@ -7,20 +7,25 @@ import { AsideComponent } from './aside/aside.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MaterialModule } from '../material/material.module';
 import { AddCategorieComponent } from './add-categorie/add-categorie.component';
+import { RouterModule } from '@angular/router';
+import { LayoutAdminComponent } from './layout-admin/layout-admin.component';
 
 
 @NgModule({
   declarations: [
     AdminModuleComponent,
+    DashboardComponent,
     NavbarComponent,
     AsideComponent,
-    DashboardComponent,
     AddCategorieComponent,
+    LayoutAdminComponent,
   ],
   imports: [
     CommonModule,
     AdminModuleRoutingModule,
-    MaterialModule
-  ]
+    MaterialModule,
+    RouterModule
+  ],
+  bootstrap: [AdminModuleComponent]
 })
 export class AdminModuleModule { }
