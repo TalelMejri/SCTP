@@ -58,11 +58,9 @@ export class LoginCompComponent {
           this.Router.navigate([""]);
         }else{
           localStorage.setItem("ModeAdmin","true");
-          this.Router.navigate(['dashboard']);
+          this.Router.navigate(['admin']);
         }
-        this.MatSnackBar.open('correct','close',{
-          duration:2000
-        })
+       
       },(error:any)=>{
           if(error.error=="User_Disabled"){
             this.loginError="User Disabled";

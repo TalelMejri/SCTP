@@ -10,7 +10,7 @@ const routes: Routes = [
   {path:"",component:HomeComponentComponent},
   {path:"signup",component:SignUpCompComponent},
   {path:"login",component:LoginCompComponent},
-  {path:"dashboard",component:DashboardComponent}
+  { path:'admin', loadChildren: () => import('./admin-module/admin-module.module').then(m => m.AdminModuleModule) }
 ];
 
 @NgModule({
