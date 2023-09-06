@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   mode:string="nightlight_round";
   showModeAdmin:Boolean=false;
   ngOnInit(): void {
+    console.log(localStorage?.getItem("ModeAdmin"));
     this.showModeAdmin=localStorage?.getItem("ModeAdmin")=="true" ? true : false;
   }
   toggle(event:MatSlideToggleChange){

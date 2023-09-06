@@ -1,1 +1,18 @@
-<p>admin-module works!</p>
+<router-outlet></router-outlet>
+<app-navbar (sidebarAction)="toggleSidebar()" ></app-navbar>
+<app-aside [isSidebarOpen]="isSidebarOpen"></app-aside>
+<main id="main" class="main" [ngClass]="{'main-shifted': isSidebarOpen}">
+    <div class="pagetitle">
+      <h1>Dashboard</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+      </nav>
+      
+    </div>
+</main> 
+
+
+

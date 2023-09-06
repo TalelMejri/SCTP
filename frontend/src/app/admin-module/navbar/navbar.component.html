@@ -1,1 +1,26 @@
-<p>navbar works!</p>
+<header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center">
+            <img width="70px" src="../../../assets/logo.png" alt="">
+            <p class="logo d-flex align-items-center">
+              <span class="d-none d-lg-block">Société Carthage Des Travaux Publics</span>
+            </p>
+      <div class="mx-5" class="btn-toggle">
+        <mat-icon (click)="sidebarAction.emit()">menu</mat-icon>
+      </div>
+    </div>
+    <nav class="header-nav ms-auto mx-5 d-flex gap-4">
+        <div>
+            <mat-icon matBadge="0" matBadgeColor="warn">favorite</mat-icon>
+        </div>
+        <div>
+            <mat-icon  matBadge="0" matBadgeColor="warn">favorite</mat-icon>
+        </div>
+        <div>
+            <mat-icon style="font-size: 25px;"  [matMenuTriggerFor]="menu">person</mat-icon>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>{{data['nom']}}</button>
+              <button mat-menu-item (click)="LogoutUser()">Logout</button>
+            </mat-menu>
+        </div>
+    </nav>  
+</header>

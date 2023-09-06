@@ -16,8 +16,6 @@ import { NgxsModule } from '@ngxs/store';
 import { AuthStore } from './Store/actions';
 import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
-import { DashboardComponent } from './AdminSide/dashboard/dashboard.component';
-
 
 
 @NgModule({
@@ -29,7 +27,6 @@ import { DashboardComponent } from './AdminSide/dashboard/dashboard.component';
     FoooterCompoComponent,
     SignUpCompComponent,
     LoginCompComponent,
-    DashboardComponent,
 
   ],
   imports: [
