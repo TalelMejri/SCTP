@@ -45,7 +45,7 @@ export class LoginCompComponent {
   }
 
   LoginForm:FormGroup;
-
+  loginError:string="";
   Login(){
     if(this.LoginForm.valid){
       this.AuthServiceService.login(this.LoginForm.value).subscribe((res:any)=>{
@@ -63,7 +63,18 @@ export class LoginCompComponent {
         this.MatSnackBar.open('correct','close',{
           duration:2000
         })
-      })
+      },(error:any)=>{
+          if(error.error=="User_Disabled"){
+            this.loginError="User Disabled";
+          }else if(error.error=="USER_NOT_FOUND"){
+            this.loginError="USER NOT FOUND";
+          }else if(error.error=="INVALID_CREDENTIALS"){
+            this.loginError="INVALID CREDENTIALS";
+          }
+          this.MatSnackBar.open(this.loginError,'close',{
+            duration:5000
+          })
+      });
     }else{
     this.LoginForm.markAllAsTouched();
     }
